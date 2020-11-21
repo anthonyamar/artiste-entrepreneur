@@ -12,9 +12,9 @@
       <!-- Nav -->
       <nav class="js-mega-menu navbar navbar-expand-lg">
         <!-- Logo -->
-        <a class="navbar-brand" href="/" aria-label="Front">
+        <%= link_to root_path, class: "navbar-brand" do %>
           <%= image_tag("logos/logo-Artiste-Entrepreneur--shortened.png", style: "width: 10rem !important;", alt: "Logo de Artiste Entrepreneur") %>
-        </a>
+        <% end %>
         <!-- End Logo -->
 
         <!-- Responsive Toggle Button -->
@@ -42,24 +42,22 @@
           <div class="navbar-body header-abs-top-inner">
             <ul class="navbar-nav">
               <li class="navbar-nav-item">
-                <a class="nav-link" href="#manifest" aria-haspopup="true" aria-expanded="false">Manifeste</a>
+                <%= link_to "Manifeste", root_path(anchor: "manifest"), class: "nav-link" %>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link" href="#testimonials" aria-haspopup="true" aria-expanded="false">Témoignage</a>
+                <%= link_to "Témoignage", root_path(anchor: "testimonials"), class: "nav-link" %>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link" href="#program" aria-haspopup="true" aria-expanded="false">La formation</a>
+                <%= link_to "La formation", root_path(anchor: "program"), class: "nav-link" %>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link" href="#team" aria-haspopup="true" aria-expanded="false">L'équipe</a>
+                <%= link_to "L'équipe", root_path(anchor: "team"), class: "nav-link" %>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link" href="#pricing" aria-haspopup="true" aria-expanded="false">Prix</a>
+                <%= link_to "Prix", root_path(anchor: "pricing"), class: "nav-link" %>
               </li>
               <li class="navbar-nav-last-item">
-                <a class="btn btn-sm btn-primary transition-3d-hover" href="#apply">
-                  Coaching gratuit
-                </a>
+                <%= link_to "Coaching gratuit", root_path(anchor: "apply"), class: "btn btn-sm btn-primary" %>
               </li>
               <!-- End Button -->
             </ul>
