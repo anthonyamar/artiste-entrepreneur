@@ -6,6 +6,9 @@ class StaticController < ApplicationController
   def legal
   end
   
+  def cgv
+  end
+  
   def typeform_success
   end
   
