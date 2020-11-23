@@ -1,6 +1,7 @@
 class StaticController < ApplicationController
   
   def home
+    @courses = I18n.t("courses")
   end
   
   def legal

@@ -1,0 +1,143 @@
+fr:
+  courses:
+    -
+      module_name: "L'état d'esprit de l'artiste entrepreneur"
+      total_duration: "2:31:29"
+      videos:
+        -
+          title: "Qu'est-ce qu'un artiste entrepreneur"
+          duration: "14:58"
+          content_type: "Vidéo"
+        -
+          title: "Être plus entreprenant chaque jour"
+          duration: "7:23"
+          content_type: "Vidéo"
+        -
+          title: "Quel est l'état du marché de la musique ?"
+          duration: "5:37"
+          content_type: "Vidéo"
+        -
+          title: "Quelle est ma place en tant qu'artiste dans ce marché ?"
+          duration: "10:03"
+          content_type: "Vidéo"
+        -
+          title: "Définir sa vision et ses valeurs"
+          duration: "8:43"
+          content_type: "Vidéo"
+        -
+          title: "Ouverture d'esprit et apprentissage continue"
+          duration: "7:48"
+          content_type: "Vidéo"
+        -
+          title: "S'organiser comme une machine pour vivre comme un humain"
+          duration: "13:54"
+          content_type: "Vidéo"
+        -
+          title: "Gérer son temps entre l'art et le business"
+          duration: "7:14"
+          content_type: "Vidéo"
+        -
+          title: "L'auto discipline et la résilience"
+          duration: "7:09"
+          content_type: "Vidéo"
+        -
+          title: "Gérer l'incertitude"
+          duration: "8:40"
+          content_type: "Vidéo"
+        -
+          title: "Session question/réponse en petit groupe"
+          duration: "~1:00:00"
+          content_type: "Visio conférence"
+
+    -
+      module_name: "Construire son projet artistique"
+      total_duration: "2:18:48"
+      videos:
+        -
+          title: "Ce qui différencie le professionnel de l'amateur"
+          duration: "4:12"
+          content_type: "Vidéo"
+        -
+          title: "La constance et la consistance"
+          duration: "11:32"
+          content_type: "Vidéo"
+        -
+          title: "Comprendre les standards de qualité de son industrie"
+          duration: "12:48"
+          content_type: "Vidéo"
+        -
+          title: "L'illusion de la perfection"
+          duration: "10:23"
+          content_type: "Vidéo"
+        -
+          title: "S'entourer et/ou faire soi-même son projet artistique ?"
+          duration: "3:43"
+          content_type: "Vidéo"
+        -
+          title: "Pourquoi, comment et quoi et faire soi-même ?"
+          duration: "8:39"
+          content_type: "Vidéo"
+        -
+          title: "Pourquoi, comment et quoi déléguer ?"
+          duration: "9:46"
+          content_type: "Vidéo"
+        -
+          title: "Faire soi-même ses musiques"
+          duration: "7:14"
+          content_type: "Vidéo"
+        -
+          title: "Faire soi-même ses visuels"
+          duration: "8:41"
+          content_type: "Vidéo"
+        -
+          title: "Faire soi-même sa promo"
+          duration: "10:31"
+          content_type: "Vidéo"
+        -
+          title: "Session question/réponse en petit groupe"
+          duration: "~1:00:00"
+          content_type: "Visio conférence"
+    -
+      module_name: "Environnement professionnel"
+      total_duration: "2:33:12"
+      videos:
+        -
+          title: "Créer son label"
+          duration: "6:32"
+          content_type: "Vidéo"
+        -
+          title: "Bien définir le cadre de sa structure"
+          duration: "15:12"
+          content_type: "Vidéo"
+        -
+          title: "Entreprise ou association ?"
+          duration: "11:37"
+          content_type: "Vidéo"
+        -
+          title: "Comment rédiger des status ? (+ Template)"
+          duration: "9:29"
+          content_type: "Vidéo"
+        -
+          title: "Protéger ses oeuvres en tant qu'auteur et/ou compositeur"
+          duration: "7:31"
+          content_type: "Vidéo"
+        -
+          title: "Protéger ses oeuvres en tant qu'interprète"
+          duration: "8:11"
+          content_type: "Vidéo"
+        -
+          title: "Protéger ses oeuvres en tant que producteur"
+          duration: "6:31"
+          content_type: "Vidéo"
+        -
+          title: "L'édition musicale"
+          duration: "12:32"
+          content_type: "Vidéo"
+        -
+          title: "Comment trouver un éditeur ou éditer soi-même ses oeuvres"
+          duration: "15:37"
+          content_type: "Vidéo"
+        -
+          title: "Session question/réponse en petit groupe"
+          duration: "~1:00:00"
+          content_type: "Visio conférence"

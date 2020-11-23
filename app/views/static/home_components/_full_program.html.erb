@@ -1,0 +1,96 @@
+<!-- Collapse -->
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-8">
+      <h3 class="mb-0">Détail du programme de la formation Artiste Entrepreneur</h3>
+    </div>
+    <div class="col-4 text-right">
+      <div class="row">
+        <div class="col-lg-6">
+          <span class="font-size-1">60 chapitres</span>
+        </div>
+        <div class="col-lg-6">
+          <span class="font-size-1">12 heures</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <% @courses.each_with_index do |course, idx| %>
+    <!-- Card -->
+    <div class="card border mb-1">
+      <div class="card-header card-collapse" id="coursesHeading-<%= idx %>">
+        <a class="btn btn-link btn-sm btn-block card-btn p-3"  href="javascript:;" role="button" data-toggle="collapse" data-target="#coursesCollapseOne"
+                aria-expanded="true" aria-controls="coursesCollapseOne">
+          <!-- Header -->
+          <span class="row">
+            <span class="col-8">
+              <span class="media">
+                <span class="card-btn-toggle mr-3 ml-0">
+                  <span class="card-btn-toggle-default">+</span>
+                  <span class="card-btn-toggle-active">−</span>
+                </span>
+                <span class="media-body">
+                  <span class="text-body font-weight-bold mr-5"><%= course[:module_name] %></span>
+                </span>
+              </span>
+            </span>
+            <span class="col-4 text-right">
+              <span class="row">
+                <span class="col-lg-6">
+                  <span class="text-muted"><%= course[:videos].size %> vidéos</span>
+                </span>
+                <span class="col-lg-6">
+                  <span class="text-muted"><%= course[:total_duration] %> heures</span>
+                </span>
+              </span>
+            </span>
+          </span>
+          <!-- End Header -->
+        </a>
+      </div>
+      <div id="coursesCollapseOne" class="collapse show" aria-labelledby="coursesHeading-<%= idx %>">
+        <div class="card-body p-0">
+          <% course[:videos].each do |video| %>
+            <!-- Course Program -->
+            <div class="border-bottom py-3 pr-3 pl-6">
+              <div class="row">
+                <div class="col-8">
+                  <a class="media font-size-1 mr-5" href="#">
+                    <i class="fa fa-play-circle min-w-3rem text-center opacity-lg mt-1 mr-2 ml-1"></i>
+                    <span class="media-body">
+                      <span><%= video[:title] %></span>
+                    </span>
+                  </a>
+                </div>
+                <div class="col-4 text-right">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <a class="font-size-1" href="#"><%= video[:content_type] %></a>
+                    </div>
+                    <div class="col-lg-6">
+                      <span class="text-primary font-size-1"><%= video[:duration] %></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Course Program -->
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <!-- End Card -->
+  <% end %>
+  <!-- Card -->
+
+  <!-- Link -->
+  <div class="card border">
+    <a class="link link-collapse btn btn-link btn-sm btn-block card-btn text-center p-3" data-toggle="collapse" href="#collapseCoursesContentSection" role="button" aria-expanded="false" aria-controls="collapseCoursesContentSection">
+      <span class="link-collapse-default">2 more sections</span>
+      <span class="link-collapse-active">View less</span>
+    </a>
+  </div>
+  <!-- End Link -->
+</div>
+<!-- End Collapse -->
