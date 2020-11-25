@@ -1,0 +1,1 @@
+Hubspot.configure(hapikey: ENV["hubspot_api_key"])
