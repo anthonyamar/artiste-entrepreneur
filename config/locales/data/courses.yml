@@ -11,11 +11,11 @@ fr:
         -
           title: "Être plus entreprenant chaque jour"
           duration: "7:23"
-          content_type: "Vidéo"
+          content_type: "Vidéo + biblio"
         -
           title: "Quel est l'état du marché de la musique ?"
           duration: "5:37"
-          content_type: "Vidéo"
+          content_type: "Vidéo + PDF"
         -
           title: "Quelle est ma place en tant qu'artiste dans ce marché ?"
           duration: "10:03"
@@ -31,7 +31,7 @@ fr:
         -
           title: "S'organiser comme une machine pour vivre comme un humain"
           duration: "13:54"
-          content_type: "Vidéo"
+          content_type: "Vidéo + templates"
         -
           title: "Gérer son temps entre l'art et le business"
           duration: "7:14"
@@ -84,21 +84,21 @@ fr:
         -
           title: "Faire soi-même ses musiques"
           duration: "7:14"
-          content_type: "Vidéo"
+          content_type: "Vidéo + outils"
         -
           title: "Faire soi-même ses visuels"
           duration: "8:41"
-          content_type: "Vidéo"
+          content_type: "Vidéo + outils"
         -
           title: "Faire soi-même sa promo"
           duration: "10:31"
-          content_type: "Vidéo"
+          content_type: "Vidéo + outils"
         -
           title: "Session question/réponse en petit groupe"
           duration: "~1:00:00"
           content_type: "Visio conférence"
     -
-      module_name: "Environnement professionnel"
+      module_name: "Comprendre son environnement professionnel"
       total_duration: "2:33:12"
       videos:
         -
@@ -108,15 +108,15 @@ fr:
         -
           title: "Bien définir le cadre de sa structure"
           duration: "15:12"
-          content_type: "Vidéo"
+          content_type: "Vidéo + PDF"
         -
           title: "Entreprise ou association ?"
           duration: "11:37"
           content_type: "Vidéo"
         -
-          title: "Comment rédiger des status ? (+ Template)"
+          title: "Comment rédiger des status ?"
           duration: "9:29"
-          content_type: "Vidéo"
+          content_type: "Vidéo + template"
         -
           title: "Protéger ses oeuvres en tant qu'auteur et/ou compositeur"
           duration: "7:31"
@@ -136,7 +136,7 @@ fr:
         -
           title: "Comment trouver un éditeur ou éditer soi-même ses oeuvres"
           duration: "15:37"
-          content_type: "Vidéo"
+          content_type: "Vidéo + outils"
         -
           title: "Session question/réponse en petit groupe"
           duration: "~1:00:00"

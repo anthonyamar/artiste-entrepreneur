@@ -21,6 +21,6 @@ module AeRailsWw
     config.i18n.default_locale = :fr
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.fallbacks = [I18n.default_locale]
-    
+    config.hosts << "bbef42f7f997.ngrok.io"
   end
 end

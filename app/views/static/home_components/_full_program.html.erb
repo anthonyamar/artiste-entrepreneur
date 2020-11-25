@@ -10,7 +10,7 @@
           <span class="font-size-1">60 chapitres</span>
         </div>
         <div class="col-lg-6">
-          <span class="font-size-1">12 heures</span>
+          <span class="font-size-1">+ de 12 heures</span>
         </div>
       </div>
     </div>
@@ -20,8 +20,8 @@
     <!-- Card -->
     <div class="card border mb-1">
       <div class="card-header card-collapse" id="coursesHeading-<%= idx %>">
-        <a class="btn btn-link btn-sm btn-block card-btn p-3"  href="javascript:;" role="button" data-toggle="collapse" data-target="#coursesCollapseOne"
-                aria-expanded="true" aria-controls="coursesCollapseOne">
+        <a class="btn btn-link btn-sm btn-block card-btn p-3 collapsed"  href="javascript:;" role="button" data-toggle="collapse" data-target="#coursesCollapse-<%= idx %>"
+                aria-expanded="false" aria-controls="coursesCollapse-<%= idx %>">
           <!-- Header -->
           <span class="row">
             <span class="col-8">
@@ -38,7 +38,7 @@
             <span class="col-4 text-right">
               <span class="row">
                 <span class="col-lg-6">
-                  <span class="text-muted"><%= course[:videos].size %> vidéos</span>
+                  <span class="text-muted"><%= course[:videos].size %> chapitres</span>
                 </span>
                 <span class="col-lg-6">
                   <span class="text-muted"><%= course[:total_duration] %> heures</span>
@@ -49,24 +49,24 @@
           <!-- End Header -->
         </a>
       </div>
-      <div id="coursesCollapseOne" class="collapse show" aria-labelledby="coursesHeading-<%= idx %>">
+      <div id="coursesCollapse-<%= idx %>" class="collapse" aria-labelledby="coursesHeading-<%= idx %>">
         <div class="card-body p-0">
           <% course[:videos].each do |video| %>
             <!-- Course Program -->
             <div class="border-bottom py-3 pr-3 pl-6">
               <div class="row">
                 <div class="col-8">
-                  <a class="media font-size-1 mr-5" href="#">
+                  <span class="media text-primary font-size-1 mr-5" href="#">
                     <i class="fa fa-play-circle min-w-3rem text-center opacity-lg mt-1 mr-2 ml-1"></i>
                     <span class="media-body">
                       <span><%= video[:title] %></span>
                     </span>
-                  </a>
+                  </span>
                 </div>
                 <div class="col-4 text-right">
                   <div class="row">
                     <div class="col-lg-6">
-                      <a class="font-size-1" href="#"><%= video[:content_type] %></a>
+                      <span class="text-primary font-size-1" href="#"><%= video[:content_type] %></span>
                     </div>
                     <div class="col-lg-6">
                       <span class="text-primary font-size-1"><%= video[:duration] %></span>
@@ -86,11 +86,55 @@
 
   <!-- Link -->
   <div class="card border">
-    <a class="link link-collapse btn btn-link btn-sm btn-block card-btn text-center p-3" data-toggle="collapse" href="#collapseCoursesContentSection" role="button" aria-expanded="false" aria-controls="collapseCoursesContentSection">
-      <span class="link-collapse-default">2 more sections</span>
-      <span class="link-collapse-active">View less</span>
+    <a class="btn btn-link btn-sm btn-block card-btn text-center p-3" href="javascript:;" data-toggle="modal" data-target="#invoiceReceiptModal">
+      <span class="link-collapse-default">Voir le détail des trois autres modules <i class="fas fa-arrow-right text-primary"></i></span>
     </a>
   </div>
   <!-- End Link -->
 </div>
 <!-- End Collapse -->
+
+<!-- Invoice Modal -->
+<div class="modal fade" id="invoiceReceiptModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <!-- Body -->
+      <div class="modal-body pt-1 pb-sm-5 px-sm-5">
+        <!-- Subscribe Section -->
+        <div class="container space-2">
+          <!-- Title -->
+          <div class="w-md-80 text-center mx-auto mb-7">
+            <h2>Reçois le<br> programme complet</h2>
+            <p>Ainsi que des contenus gratuits exclusifs pour t'aider à prendre en main ta carrière !</p>
+          </div>
+          <!-- End Title -->
+
+          <div class="w-lg-70 mx-lg-auto">
+            <!-- Form -->
+            <form class="js-validate">
+              <div class="form">
+                <div class="col-sm col-md-6 col-lg mb-2">
+                  <div class="js-form-message">
+                    <label class="sr-only" for="signupSrEmailExample1">Ton email</label>
+                    <div class="input-group">
+                      <input type="email" class="form-control" name="email" id="signupSrEmailExample1" placeholder="Ton email" aria-label="Ton email" required
+                             data-msg="Please enter a valid email address.">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-auto">
+                  <button type="submit" class="btn btn-primary btn-block">Je reçois le programme</button>
+                </div>
+              </div>
+            </form>
+            <!-- End Form -->
+          </div>
+        </div>
+        <!-- End Subscribe Section -->
+      </div>
+      <!-- End Body -->
+    </div>
+  </div>
+</div>
+<!-- End Invoice Modal -->
