@@ -9,6 +9,7 @@
 //= require jquery-mask-plugin
 //= require jquery-validation
 //= require leaflet
+//= require party.min
 //= require polifills
 //= require quill
 //= require select2

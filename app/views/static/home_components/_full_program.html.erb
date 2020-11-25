@@ -15,78 +15,78 @@
       </div>
     </div>
   </div>
-  
+
   <% @courses.each_with_index do |course, idx| %>
-    <!-- Card -->
-    <div class="card border mb-1">
-      <div class="card-header card-collapse" id="coursesHeading-<%= idx %>">
-        <a class="btn btn-link btn-sm btn-block card-btn p-3 collapsed"  href="javascript:;" role="button" data-toggle="collapse" data-target="#coursesCollapse-<%= idx %>"
-                aria-expanded="false" aria-controls="coursesCollapse-<%= idx %>">
-          <!-- Header -->
-          <span class="row">
-            <span class="col-8">
-              <span class="media">
-                <span class="card-btn-toggle mr-3 ml-0">
-                  <span class="card-btn-toggle-default">+</span>
-                  <span class="card-btn-toggle-active">−</span>
-                </span>
-                <span class="media-body">
-                  <span class="text-body font-weight-bold mr-5"><%= course[:module_name] %></span>
-                </span>
+  <!-- Card -->
+  <div class="card border mb-1">
+    <div class="card-header card-collapse" id="coursesHeading-<%= idx %>">
+      <a class="btn btn-link btn-sm btn-block card-btn p-3 collapsed"  href="javascript:;" role="button" data-toggle="collapse" data-target="#coursesCollapse-<%= idx %>"
+         aria-expanded="false" aria-controls="coursesCollapse-<%= idx %>">
+        <!-- Header -->
+        <span class="row">
+          <span class="col-8">
+            <span class="media">
+              <span class="card-btn-toggle mr-3 ml-0">
+                <span class="card-btn-toggle-default">+</span>
+                <span class="card-btn-toggle-active">−</span>
               </span>
-            </span>
-            <span class="col-4 text-right">
-              <span class="row">
-                <span class="col-lg-6">
-                  <span class="text-muted"><%= course[:videos].size %> chapitres</span>
-                </span>
-                <span class="col-lg-6">
-                  <span class="text-muted"><%= course[:total_duration] %> heures</span>
-                </span>
+              <span class="media-body">
+                <span class="text-body font-weight-bold mr-5"><%= course[:module_name] %></span>
               </span>
             </span>
           </span>
-          <!-- End Header -->
-        </a>
-      </div>
-      <div id="coursesCollapse-<%= idx %>" class="collapse" aria-labelledby="coursesHeading-<%= idx %>">
-        <div class="card-body p-0">
-          <% course[:videos].each do |video| %>
-            <!-- Course Program -->
-            <div class="border-bottom py-3 pr-3 pl-6">
+          <span class="col-4 text-right">
+            <span class="row">
+              <span class="col-lg-6">
+                <span class="text-muted"><%= course[:videos].size %> chapitres</span>
+              </span>
+              <span class="col-lg-6">
+                <span class="text-muted"><%= course[:total_duration] %> heures</span>
+              </span>
+            </span>
+          </span>
+        </span>
+        <!-- End Header -->
+      </a>
+    </div>
+    <div id="coursesCollapse-<%= idx %>" class="collapse" aria-labelledby="coursesHeading-<%= idx %>">
+      <div class="card-body p-0">
+        <% course[:videos].each do |video| %>
+        <!-- Course Program -->
+        <div class="border-bottom py-3 pr-3 pl-6">
+          <div class="row">
+            <div class="col-8">
+              <span class="media text-primary font-size-1 mr-5" href="#">
+                <i class="fa fa-play-circle min-w-3rem text-center opacity-lg mt-1 mr-2 ml-1"></i>
+                <span class="media-body">
+                  <span><%= video[:title] %></span>
+                </span>
+              </span>
+            </div>
+            <div class="col-4 text-right">
               <div class="row">
-                <div class="col-8">
-                  <span class="media text-primary font-size-1 mr-5" href="#">
-                    <i class="fa fa-play-circle min-w-3rem text-center opacity-lg mt-1 mr-2 ml-1"></i>
-                    <span class="media-body">
-                      <span><%= video[:title] %></span>
-                    </span>
-                  </span>
+                <div class="col-lg-6">
+                  <span class="text-primary font-size-1" href="#"><%= video[:content_type] %></span>
                 </div>
-                <div class="col-4 text-right">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <span class="text-primary font-size-1" href="#"><%= video[:content_type] %></span>
-                    </div>
-                    <div class="col-lg-6">
-                      <span class="text-primary font-size-1"><%= video[:duration] %></span>
-                    </div>
-                  </div>
+                <div class="col-lg-6">
+                  <span class="text-primary font-size-1"><%= video[:duration] %></span>
                 </div>
               </div>
             </div>
-            <!-- End Course Program -->
-          <% end %>
+          </div>
         </div>
+        <!-- End Course Program -->
+        <% end %>
       </div>
     </div>
-    <!-- End Card -->
+  </div>
+  <!-- End Card -->
   <% end %>
   <!-- Card -->
 
   <!-- Link -->
   <div class="card border">
-    <a class="btn btn-link btn-sm btn-block card-btn text-center p-3" href="javascript:;" data-toggle="modal" data-target="#invoiceReceiptModal">
+    <a class="btn btn-link btn-sm btn-block card-btn text-center p-3" href="javascript:;" data-toggle="modal" data-target="#programEmail">
       <span class="link-collapse-default">Voir le détail des trois autres modules <i class="fas fa-arrow-right text-primary"></i></span>
     </a>
   </div>
@@ -95,7 +95,7 @@
 <!-- End Collapse -->
 
 <!-- Invoice Modal -->
-<div class="modal fade" id="invoiceReceiptModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="programEmail" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <!-- Body -->
@@ -111,23 +111,27 @@
 
           <div class="w-lg-70 mx-lg-auto">
             <!-- Form -->
-            <form class="js-validate">
-              <div class="form">
-                <div class="col-sm col-md-6 col-lg mb-2">
-                  <div class="js-form-message">
-                    <label class="sr-only" for="signupSrEmailExample1">Ton email</label>
-                    <div class="input-group">
-                      <input type="email" class="form-control" name="email" id="signupSrEmailExample1" placeholder="Ton email" aria-label="Ton email" required
-                             data-msg="Please enter a valid email address.">
-                    </div>
+            <div class="form">
+              <div class="col-sm col-md-6 col-lg mb-2">
+                <div class="js-form-message">
+                  <label class="sr-only" for="signupSrEmailExample1">Ton email</label>
+                  <div class="input-group">
+                    <input type="email" id="email" class="form-control" placeholder="Ton email">
                   </div>
                 </div>
-
-                <div class="col-sm-auto">
-                  <button type="submit" class="btn btn-primary btn-block">Je reçois le programme</button>
-                </div>
               </div>
-            </form>
+
+              <div class="col-sm-auto">
+                <button type="submit" class="btn btn-primary btn-block" onclick="sendProgram();">Je reçois le programme</button>
+                <p class="text-danger mt-3" id="alert-danger" style="display: none;">
+                  Ce type d'email n'est pas autorisé. Merci d'utiliser un email plus conventionel. 
+                </p>
+                <p class="text-success mt-3" id="alert-success" style="display: none;">
+                  Merci, tu vas recevoir le programme par email !
+                </p>
+              </div>
+
+            </div>
             <!-- End Form -->
           </div>
         </div>

@@ -3,6 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+# SERVICES
+gem 'sendgrid-ruby'
+gem 'hubspot-ruby'
+
+# VALIDATIONS
+gem 'ruby-mailchecker'
+
+# FORMS
+gem 'simple_form'
+
 # STARTING BUNDLED GEMS
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'pg', '>= 0.18', '< 2.0'
