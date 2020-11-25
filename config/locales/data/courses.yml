@@ -2,7 +2,7 @@ fr:
   courses:
     -
       module_name: "L'état d'esprit de l'artiste entrepreneur"
-      total_duration: "2:31:29"
+      total_duration: "2h31"
       videos:
         -
           title: "Qu'est-ce qu'un artiste entrepreneur"
@@ -15,11 +15,11 @@ fr:
         -
           title: "Quel est l'état du marché de la musique ?"
           duration: "5:37"
-          content_type: "Vidéo + PDF"
+          content_type: "Podcast + PDF"
         -
           title: "Quelle est ma place en tant qu'artiste dans ce marché ?"
           duration: "10:03"
-          content_type: "Vidéo"
+          content_type: "Podcast"
         -
           title: "Définir sa vision et ses valeurs"
           duration: "8:43"
@@ -51,7 +51,7 @@ fr:
 
     -
       module_name: "Construire son projet artistique"
-      total_duration: "2:18:48"
+      total_duration: "2h18"
       videos:
         -
           title: "Ce qui différencie le professionnel de l'amateur"
@@ -99,7 +99,7 @@ fr:
           content_type: "Visio conférence"
     -
       module_name: "Comprendre son environnement professionnel"
-      total_duration: "2:33:12"
+      total_duration: "2h33"
       videos:
         -
           title: "Créer son label"
