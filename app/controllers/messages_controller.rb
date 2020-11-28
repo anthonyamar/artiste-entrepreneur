@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
     if MailChecker.valid?(@email)
       MarketingMailer.full_program(@email).deliver
       save_email_to_hubspot(@email) if Rails.env.production?
+      SlackNotifier.new.perform("💌 Programme envoyé à #{@email} et fiche contact créée sur HubSpot 👌")
       render json: "Programme envoyé", status: 200
     else
       render json: "Le domaine #{@email.partition('@').last if email} n'est pas autorisé", status: 401

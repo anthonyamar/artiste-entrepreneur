@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 
 # SERVICES
-gem 'sendgrid-ruby'
 gem 'hubspot-ruby'
+gem 'slack-notifier'
 
 # VALIDATIONS
 gem 'ruby-mailchecker'
