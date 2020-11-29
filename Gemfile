@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+# ASSETS
+gem 'uglifier', '~> 3.2.0'
+
 # SERVICES
 gem 'hubspot-ruby'
 gem 'slack-notifier'
@@ -13,6 +16,13 @@ gem 'ruby-mailchecker'
 # FORMS
 gem 'simple_form'
 
+# CONTENTFUL
+gem 'contentful'
+gem 'kramdown'
+
+# SEO
+gem 'sitemap_generator'
+
 # STARTING BUNDLED GEMS
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -21,7 +31,7 @@ gem 'sass-rails', '>= 6'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'figaro'
-gem 'uglifier',                 '~> 3.2.0'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
