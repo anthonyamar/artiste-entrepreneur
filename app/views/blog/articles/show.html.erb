@@ -1,0 +1,119 @@
+<main id="content" class="blog" role="main">
+    <!-- Article Description Section -->
+    <div class="container space-top-5 space-bottom-2">
+      <div class="w-lg-60 mx-lg-auto">
+        <div class="mb-4 text-center">
+          <h1><%= @article.title %></h1>
+          <% if @article.sub_title %>
+            <h2><%= @article.sub_title %></h2>
+          <% end %>
+        </div>
+
+      
+        <div class="my-4 my-sm-8 text-center">
+          <img class="img-fluid rounded" src="<%= @article.hero_image.url %>" alt="<%= @article.hero_image.title %>">
+        </div>
+      </div>
+      <div class="w-lg-60 mx-lg-auto">
+        <!-- Author -->
+        <div class="border-top border-bottom py-4 mb-5">
+          <div class="row align-items-md-center">
+            <div class="col-md-7 mb-5 mb-md-0">
+              <div class="media align-items-center">
+                <div class="avatar avatar-circle">
+                  <img class="avatar-img" src="<%= @article.author.image.url %>" alt="Auteur : <%= @article.author.name %>">
+                </div>
+                <div class="media-body font-size-1 ml-3">
+                  <span class="h6">Par <%= @article.author.name %></span>
+                  <span class="d-block text-muted"><%= I18n.l(@article.publish_date, format: :medium_date) %></span>
+                  <span class="d-block text-muted"><%= @article.categories.to_sentence.capitalize %></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="d-flex justify-content-md-end align-items-center">
+                <span class="d-block small font-weight-bold text-cap mr-2">Share:</span>
+
+                <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="#">
+                  <i class="fab fa-telegram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Author -->
+      </div>
+
+      <div class="w-lg-60 mx-lg-auto article-body">
+        <%= Kramdown::Document.new(@article.body).to_html.html_safe %>
+      </div>
+      
+      
+          <!-- End Article Description Section -->
+      <div class="bg-light rounded mt-11">
+        <div class="container space-1 space-md-2">
+          <div class="row">
+            <div class="col-sm-6 text-center mx-auto pl-xl-7 order-2 order-sm-1 pt-5">
+              <h2 class="landing-h2">Propulsez votre carrière.</h2>
+              <p class="mx-auto">
+                Nous accompagnons les musicien·nes les plus ambitieux·ses dans le développement de leur carrière grâce à notre formation en ligne 100% finançable Artiste Entrepreneur.
+              </p>
+              <a href="https://artiste-entrepreneur.com/?utm_source=studiomatic&amp;utm_medium=blog&amp;utm_campaign=Studiomatic lance la formation Artiste Entrepreneur" class="btn btn-primary mt-3" target="_blank">
+                Formation Artiste Entrepreneur
+              </a>
+            </div>
+            <div class="col-sm-5 d-flex justify-content-center order-1 order-sm-2">
+              <%= image_tag("svg/illustrations/jetpack.svg", class: "img-fluid w-75", alt: "Illustration pour la formation Artiste Entrepreneur") %>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Blog Card Section -->
+    <div class="container">
+      <div class="w-lg-100 space-1 mb-11 mx-lg-auto">
+        <div class="mb-3 mb-sm-5">
+          <h3>Nos autres articles pouvant vous intéresser</h3>
+        </div>
+
+        <div class="row">
+          <% @related_articles.each do |article| %>
+            <div class="col-md-6 card shadow-soft transition-3d-hover">
+              <!-- Blog Card -->
+              <%= link_to link_to blog_article_path(article.slug) do %>
+                <article class="card-body h-100 py-5">
+                  <div class="row justify-content-between">
+                    <div class="col-6">
+                      <div class="small font-weight-bold text-cap mb-2" href="#">
+                        <%= article.categories.to_sentence.capitalize %>
+                      </div>
+                      <h4 class="mb-0">
+                        <%= article.title %>
+                      </h4>
+                    </div>
+
+                    <div class="col-5">
+                      <img class="img-fluid rounded" src="<%= article.hero_image.url %>" alt="<%= article.hero_image.title %>">
+                    </div>
+                  </div>
+                </article>
+              <% end %>
+              <!-- End Blog Card -->
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <!-- End Blog Card Section -->
+  </main>
