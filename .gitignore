@@ -4,8 +4,15 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore dotenv
+.env
+
 # Ignore bundler config.
 /.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -13,20 +20,32 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+/node_modules
+/yarn-error.log
 
-# Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
-
-/public/assets
 .byebug_history
-
-# Ignore master key for decrypting credentials and more.
-/config/master.key
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore Redis database save
+/dump.rdb
+
+# Ignore storage
+/storage/*
+
+# Ignore Coverage for test coverability
+/coverage.data
+/coverage/
+
+# Ignore sandi_meter
+sandi_meter
+
+# Ignore PG dumps
+.dump*
+
+# Ignore CSV dumps
+.csv
+
+# Ignore useless macOS hidden files
+.DS_Store
