@@ -27,6 +27,7 @@
 
 # Ignore application configuration
 /config/application.yml
+/config/master.key
 
 # Ignore Redis database save
 /dump.rdb
