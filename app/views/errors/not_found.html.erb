@@ -1,0 +1,18 @@
+<main id="content" role="main" class="bg-img-hero-fixed" style="background-image: url(<%= image_url("svg/illustrations/error-404.svg") %>);">
+  <!-- Hero Section -->
+  <div class="d-lg-flex">
+    <div class="container d-lg-flex align-items-lg-center min-vh-lg-100 space-4">
+      <div class="w-lg-60 w-xl-50">
+        <!-- Title -->
+        <div class="mb-4">
+          <%= image_tag("svg/illustrations/error-number-404.svg", class: "max-w-23rem mb-3", alt: "Illustration 404") %>
+          <p class="lead">Oups ! Il semblerait que ce lien n'existe plus. <br> Si vous pensez que c'est un problème, veuillez <a href="mailto:hello@artiste-entrepreneur.com">nous contacter.</a></p>
+        </div>
+        <!-- End Title -->
+        
+        <%= link_to "Retour à l'accueil", root_path, class: "btn btn-wide btn-primary transition-3d-hover" %>
+      </div>
+    </div>
+  </div>
+  <!-- End Hero Section -->
+</main>
