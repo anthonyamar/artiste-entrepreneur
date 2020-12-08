@@ -27,6 +27,8 @@ p {
   font-family: 'Open Sans Regular', sans-serif !important;
 }
 
-.w-lg-70 {
-  width: 70% !important;
+@media (min-width: 992px) {
+  .w-lg-70 {
+    width: 70% !important;
+  }
 }

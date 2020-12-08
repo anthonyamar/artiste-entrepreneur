@@ -1,0 +1,46 @@
+<!-- Title -->
+<div class="row mb-5">
+  <div class="col-6">
+    <h2 class="h3 mb-0">Tous nos articles</h2>
+  </div>
+</div>
+<!-- End Title -->
+
+<div class="row mb-3">
+  <% @articles.reject { |a| a == featured_article }.each do |article| %>
+    <div class="col-sm-6 col-lg-4 mb-3 mb-sm-8">
+      <!-- Blog Card -->
+      <%= link_to blog_article_path(article.slug) do %>
+        <article class="card h-100">
+          <div class="card-img-top position-relative">
+            <img class="card-img-top" src="<%= article.hero_image.url %>" alt="<%= article.hero_image.title %>">
+            <figure class="ie-curved-y position-absolute right-0 bottom-0 left-0 mb-n1">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+                <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"/>
+              </svg>
+            </figure>
+          </div>
+
+          <div class="card-body">
+            <h3 class="text-inherit"><%= article.title %></h3>
+            <p class="description"><%= article.description %></p>
+          </div>
+
+          <div class="card-footer border-0 pt-0">
+            <div class="media align-items-center">
+              <div class="avatar-group">
+                <div class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="<%= article.author.name %>">
+                  <img class="avatar-img" src="<%= article.author.image.url %>" alt="Auteur : <%= article.author.name %>">
+                </div>
+              </div>
+              <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+                <%= I18n.l(article.publish_date, format: :medium_date) %>
+              </div>
+            </div>
+          </div>
+        </article>
+      <% end %>
+      <!-- End Blog Card -->
+    </div>
+  <% end %>
+</div>

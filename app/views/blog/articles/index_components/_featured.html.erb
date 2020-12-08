@@ -1,0 +1,40 @@
+<% featured_image = featured_article.feature_image.nil? ? featured_article.hero_image.image_url : featured_article.feature_image.image_url %>
+<!-- Blog Card -->
+<%= link_to blog_article_path(featured_article.slug) do %>
+  <article class="card mb-11">
+    <div class="row no-gutters">
+      <div class="col-lg-8">
+        <div class="position-relative overflow-hidden">
+          <img class="card-img" src="<%= featured_image %>" alt="Image Description">
+          <figure class="d-none d-lg-block">
+            <svg class="ie-curved-x position-absolute top-0 right-0 bottom-0 mr-n1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100.1 1920" height="101%">
+              <path fill="#fff" d="M0,1920c0,0,93.4-934.4,0-1920h100.1v1920H0z"/>
+            </svg>
+          </figure>
+          <figure class="d-lg-none mb-n1">
+            <svg class="ie-curved-y position-absolute right-0 bottom-0 left-0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+              <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"/>
+            </svg>
+          </figure>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card-body d-flex flex-column h-100 p-4 p-lg-5">
+          <h2 class="text-inherit"><%= featured_article.title %></h2>
+          <p class="description text-lh-lg mt-2"><%= featured_article.description %></p>
+          <div class="media align-items-center mt-3 mt-xl-auto">
+            <div class="avatar-group">
+              <div class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip" data-placement="top" title="<%= featured_article.author.name %>">
+                <img class="avatar-img" src="<%= featured_article.author.image.url %>" alt="Auteur : <%= featured_article.author.name %>">
+              </div>
+            </div>
+            <div class="media-body d-flex justify-content-end text-muted font-size-1 ml-2">
+              <%= I18n.l(featured_article.publish_date, format: :medium_date) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+<% end %>

@@ -1,0 +1,36 @@
+<!-- Blog Card Section -->
+<div class="container">
+  <div class="w-lg-100 space-1 mb-11 mx-lg-auto">
+    <div class="mb-3 mb-sm-5">
+      <h3>Nos autres articles pouvant vous intéresser</h3>
+    </div>
+
+    <div class="row">
+      <% @related_articles.each do |article| %>
+        <div class="col-md-6 card shadow-soft transition-3d-hover">
+          <!-- Blog Card -->
+          <%= link_to link_to blog_article_path(article.slug) do %>
+            <article class="card-body h-100 py-5">
+              <div class="row justify-content-between">
+                <div class="col-6">
+                  <div class="small font-weight-bold text-cap mb-2" href="#">
+                    <%= article.categories.to_sentence.capitalize %>
+                  </div>
+                  <h4 class="mb-0">
+                    <%= article.title %>
+                  </h4>
+                </div>
+
+                <div class="col-5">
+                  <img class="img-fluid rounded" src="<%= article.hero_image.url %>" alt="<%= article.hero_image.title %>">
+                </div>
+              </div>
+            </article>
+          <% end %>
+          <!-- End Blog Card -->
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- End Blog Card Section -->
