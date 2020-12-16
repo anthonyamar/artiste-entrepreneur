@@ -31,6 +31,24 @@
     <script>
       if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="assets/vendor/polifills.js"><\/script>');
     </script>
+    
+    <script>
+      function initFreshChat() {
+        window.fcWidget.init({
+          token: "8a16a58b-ff0a-4124-99d5-d89fe1156287",
+          host: "https://wchat.eu.freshchat.com",
+          config: {
+            content: {
+              headers: {
+                chat: "On discute ? 😃",
+                chat_help: "Questions, support, remarques ou mots doux 😊.",
+              },
+            },
+          },
+        });
+      }
+      function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.eu.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+    </script>
 
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8858606.js"></script>
