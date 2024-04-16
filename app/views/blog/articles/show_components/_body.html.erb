@@ -1,0 +1,53 @@
+<!-- Article Description Section -->
+<div class="container space-top-5 space-bottom-2">
+  <div class="w-lg-70 mx-lg-auto">
+    <div class="mb-4 text-center">
+      <h1><%= @article.title %></h1>
+      <% if @article.sub_title %>
+      <h2><%= @article.sub_title %></h2>
+      <% end %>
+    </div>
+
+
+    <div class="my-4 my-sm-8 text-center">
+      <img class="img-fluid rounded" src="<%= @article.hero_image.url %>" alt="<%= @article.hero_image.title %>">
+    </div>
+  </div>
+  <div class="w-lg-70 mx-lg-auto">
+    <!-- Author -->
+    <div class="border-top border-bottom py-4 mb-5">
+      <div class="row align-items-md-center">
+        <div class="col-md-7 mb-5 mb-md-0">
+          <div class="media align-items-center">
+            <div class="avatar avatar-circle">
+              <img class="avatar-img" src="<%= @article.author.image.url %>" alt="Auteur : <%= @article.author.name %>">
+            </div>
+            <div class="media-body font-size-1 ml-3">
+              <span class="h6">Par <%= @article.author.name %></span>
+              <span class="d-block text-muted"><%= I18n.l(@article.publish_date, format: :medium_date) %></span>
+              <span class="d-block text-muted"><%= @article.categories.to_sentence.capitalize %></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="d-flex justify-content-md-end align-items-center">
+            <span class="d-block small font-weight-bold text-cap mr-2">Partager :</span>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>" class="fb-xfbml-parse-ignore btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2">
+              <i class="fab fa-facebook fa-lg mx-1"></i>
+            </a>
+            <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="https://twitter.com/intent/tweet?text=<%= @article.title %> by @studiomatic_ - <%= request.original_url %> #studiomatic" target="_blank">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Author -->
+  </div>
+
+  <div class="w-lg-70 mx-lg-auto article-body">
+    <%= Kramdown::Document.new(@article.body).to_html.html_safe %>
+  </div>
+  
+  <%= render "blog/articles/shared/native_ad" %>
+</div>

@@ -1,0 +1,11 @@
+<% content_for :meta_title, @article.title %>
+<% content_for :meta_description, @article.description %>
+<% content_for :meta_image, @article.hero_image.image_url %>
+<% content_for :meta_author, @article.author.name %>
+<% content_for :meta_keywords, @article.tags.join(',') %>
+<% components_path = "blog/articles/show_components/" %>
+
+<main id="content" class="blog" role="main">
+  <%= render components_path + "body" %>
+  <%= render components_path + "related_articles" %>
+</main>
