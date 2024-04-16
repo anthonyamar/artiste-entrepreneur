@@ -7,6 +7,6 @@ Nous accompagnons les artistes les plus ambitieux dans le développement de leur
 - Ruby 2.7
 - PostegreSQL
 - Heroku
-- Strapi Headless CMS
+- Contentful Headless CMS
 - Vanilla JS
 - Template Front Bootstrap
